@@ -50,4 +50,13 @@ packer.startup(function(use)
     "L3MON4D3/LuaSnip",
     requires = "saadparwaiz1/cmp_luasnip",
   })
+
+  use("lervag/vimtex")
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use("mhinz/vim-startify")
 end)
