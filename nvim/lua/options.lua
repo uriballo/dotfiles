@@ -11,7 +11,7 @@ o.scrolloff = 8
 
 o.number = true
 o.numberwidth = 2
-o.relativenumber = false
+o.relativenumber = true
 
 o.expandtab = true
 o.smarttab = true
@@ -27,3 +27,5 @@ o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 
 g.mapleader = ' '
 g.maplocalleader = ' '
+
+vim.cmd("colorscheme onedarkpro")
