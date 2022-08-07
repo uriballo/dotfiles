@@ -40,10 +40,28 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+  -- basic plugins
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "nvim-lua-line/lualine.nvim"
+  use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used in lots of plugins
+  use "nvim-lualine/lualine.nvim"
+
+  -- completion plugins
+  use "hrsh7th/nvim-cmp"         -- The completion plugin
+  use "hrsh7th/cmp-buffer"       -- buffer completions
+  use "hrsh7th/cmp-path"         -- path completions
+  use "hrsh7th/cmp-cmdline"      -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+
+  -- snippet plugins
+  use "L3MON4D3/LuaSnip" -- snippet engine
+
+  -- LSP
+  use "neovim/nvim-lspconfig"           -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
   use {
 	  "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
@@ -64,6 +82,7 @@ return packer.startup(function(use)
           require("onedarkpro").setup()
       end
   }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
