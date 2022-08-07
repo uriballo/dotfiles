@@ -6,7 +6,7 @@
 NVIM_CONFIG="$HOME/.config/nvim"
 
 # Clone nvchad
-[ ! -d "$NVIM_CONFIG" ] && git_clone NvChad/NvChad "$NVIM_CONFIG" --depth 1
+[ ! -d "$NVIM_CONFIG" ] && git clone https://github.com/NvChad/NvChad "$NVIM_CONFIG" --depth 1
 
 # Stow the custom folder of nvchad
 stow -vR nvim
