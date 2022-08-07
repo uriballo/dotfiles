@@ -73,6 +73,8 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
 
+  -- LaTex
+  use "lervag/vimtex"
   use {
 	  "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
